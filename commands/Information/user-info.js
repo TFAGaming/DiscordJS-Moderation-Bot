@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require('discord.js');
+const { EmbedBuilder, PermissionsBitField } = require('discord.js');
 
 module.exports = {
     name: 'user-info',
@@ -8,7 +8,7 @@ module.exports = {
         {
             name: 'user',
             description: 'The user to get their information.',
-            type: 3,
+            type: 6,
             required: false
         }
     ],
@@ -35,6 +35,23 @@ module.exports = {
 
         if (user.roles.cache.size < 1) rr = "No roles";
 
+        function fetchAcknowledgements(userInput) {
+            let result;
+
+            try {
+                if (userInput.permissions.has(PermissionsBitField.ViewChannel)) result = "Server Member";
+                if (userInput.permissions.has(PermissionsBitField.KickMembers)) result = "Server Moderator";
+                if (userInput.permissions.has(PermissionsBitField.ManageServer)) result = "Server Manager";
+                if (userInput.permissions.has(PermissionsBitField.Administrator)) result = "Server Administrator";
+                if (userInput.id === interaction.guild.ownerId) result = "Server Owner";
+
+            } catch (e) {
+                result = "Server Member";
+            };
+
+            return result;
+        }
+
         return interaction.reply({
             embeds: [
                 new EmbedBuilder()
@@ -52,7 +69,7 @@ module.exports = {
                             inline: true
                         },
                         {
-                            name: 'Premium?',
+                            name: 'Server booster?',
                             value: `${user.premiumSince === null ? 'No' : 'Yes'}`,
                             inline: true
                         },
@@ -62,15 +79,25 @@ module.exports = {
                             inline: true
                         },
                         {
-                            name: 'Joined at',
+                            name: 'Created at',
                             value: `<t:${(user.user.createdTimestamp / 1000).toString().split('.')[0]}> (<t:${(user.user.createdTimestamp / 1000).toString().split('.')[0]}:R>)`,
                             inline: true
                         },
                         {
-                            name: `Roles [${user.roles.size || 0}]`,
-                            value: `${rr}`,
+                            name: 'Bot?',
+                            value: `${user.user.bot ? 'Yes' : 'No'}`,
                             inline: true
-                        }
+                        },
+                        {
+                            name: `Roles [${(user?.roles?.cache?.size - 1) || 0}]`,
+                            value: `${rr || "No roles"}`,
+                            inline: false
+                        },
+                        {
+                            name: 'Acknowledgements',
+                            value: `${fetchAcknowledgements(user) || "Server Member"}`,
+                            inline: true
+                        },
                     )
                     .setColor('Blurple')
             ]
