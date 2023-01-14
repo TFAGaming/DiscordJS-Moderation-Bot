@@ -1,0 +1,14 @@
+const { } = require('discord.js');
+
+module.exports = {
+    name: '',
+    description: '',
+    type: 1,
+    options: [],
+    role_perms: null,
+    developers_only: false,
+    category: '',
+    run: async (client, interaction, config) => {
+        
+    }
+};
