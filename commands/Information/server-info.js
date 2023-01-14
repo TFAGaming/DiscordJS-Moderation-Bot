@@ -12,6 +12,14 @@ module.exports = {
 
         const guild = interaction.guild;
 
+        const verificationLevelObj = {
+            0: 'None',
+            1: 'Low',
+            2: 'Medium',
+            3: 'High',
+            4: 'Very high'
+        };
+
         return interaction.reply({
             embeds: [
                 new EmbedBuilder()
@@ -20,7 +28,7 @@ module.exports = {
                     .addFields(
                         {
                             name: 'Guild ID',
-                            value: `${guild.id}`,
+                            value: `\`${guild.id}\``,
                             inline: true
                         },
                         {
@@ -29,8 +37,13 @@ module.exports = {
                             inline: true
                         },
                         {
-                            name: 'Guild ID',
-                            value: `${guild.id}`,
+                            name: 'Created at',
+                            value: `<t:${(guild.createdTimestamp / 1000).toString().split('.')[0]}> (<t:${(guild.createdTimestamp / 1000).toString().split('.')[0]}:R>)`,
+                            inline: true
+                        },
+                        {
+                            name: 'Verification level',
+                            value: `${verificationLevelObj[guild.verificationLevel]}`,
                             inline: true
                         },
                         {
@@ -46,6 +59,16 @@ module.exports = {
                         {
                             name: 'Total boosts',
                             value: `${guild.premiumSubscriptionCount}`,
+                            inline: true
+                        },
+                        {
+                            name: 'Total emojis',
+                            value: `${guild.emojis.cache.size}`,
+                            inline: true
+                        },
+                        {
+                            name: 'Max members to join',
+                            value: `${guild.maximumMembers}`,
                             inline: true
                         }
                     )
