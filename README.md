@@ -1,10 +1,12 @@
 <div align="center">
   <img src="https://user-images.githubusercontent.com/92172698/212478747-4db80253-59a9-4702-b5a8-0cb2ecb7ef62.png"><br>
-</div>
-
-  <a style="font-size:30px" align="center">
+   <h1>
     DiscordJS-Moderation-Bot 
-  </a>
+   </h1>
+   <h5>
+    Version 4.0  
+   </h5>
+</div>
 
 # DiscordJS-Moderation-Bot
 The best Discord Moderation bot that I have ever created, all made with discord.js version 14 and discord.js-v14-helper. This project requires MongoDB to connect to the database, so make sure to get a MongoDB URI! You can create many commands as you want to improve your bot, just make sure that your bot won't go crazy!
