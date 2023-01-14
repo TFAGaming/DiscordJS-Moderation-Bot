@@ -1,6 +1,6 @@
 <div align="center">
   <img src="https://user-images.githubusercontent.com/92172698/212478747-4db80253-59a9-4702-b5a8-0cb2ecb7ef62.png"><br>
-  <p style="font-family:'Courier New'; font-size=30px">
+  <p style="font-family:'Courier New'">
     DiscordJS-Moderation-Bot 
   </p>
 </div>
