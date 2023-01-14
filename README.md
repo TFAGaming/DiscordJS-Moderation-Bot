@@ -33,7 +33,7 @@ The setup for now is for [Visual Studio Code](https://code.visualstudio.com/) us
 - 1. Install [Visual Studio Code](https://code.visualstudio.com/).
 - 2. Install [node.js](https://nodejs.org/en/download/).
 - 3. Open command propmt and then type `node -v` and make sure that you have installed node.js version **16.9.0** or above.
-- 4. [Download the project](https://github.com/TFAGaming/Tags-System-Discord-Bot/archive/refs/heads/main.zip) and extract the folder from .zip folder to a normal folder.
+- 4. [Download the project](https://github.com/TFAGaming/DiscordJS-Moderation-Bot/archive/refs/heads/main.zip) and extract the folder from .zip folder to a normal folder.
 - 5. Open the folder on a new VSCode tab.
 - 6. Go to `config/main.js` and edit the properties of each file. Also make sure to check `config/data.json` because it is also a configuration file.
 - 7. Open terminal and then type `node index.js` or `node .`.
