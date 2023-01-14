@@ -1,5 +1,8 @@
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/92172698/212478624-18811daa-9d1b-49ac-b5ac-c6c27af01c41.png">
+  <img src="https://user-images.githubusercontent.com/92172698/212478747-4db80253-59a9-4702-b5a8-0cb2ecb7ef62.png"><br>
+  <p>
+    DiscordJS-Moderation-Bot 
+  </p>
 </div>
 
 # DiscordJS-Moderation-Bot
