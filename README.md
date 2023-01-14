@@ -4,7 +4,7 @@
     DiscordJS-Moderation-Bot 
    </h2>
    <h5>
-    Version 4.0  
+    The advanced Discord Moderation bot with discord.js 14.  
    </h5>
 </div>
 
