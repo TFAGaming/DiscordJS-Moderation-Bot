@@ -1,5 +1,5 @@
 <div align="center">
-  ![DiscordJS-Moderation-Bot (1)](https://user-images.githubusercontent.com/92172698/212478624-18811daa-9d1b-49ac-b5ac-c6c27af01c41.png)
+  <img src="https://user-images.githubusercontent.com/92172698/212478624-18811daa-9d1b-49ac-b5ac-c6c27af01c41.png">
 </div>
 
 # DiscordJS-Moderation-Bot
