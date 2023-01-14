@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/92172698/212478747-4db80253-59a9-4702-b5a8-0cb2ecb7ef62.png"><br>
-   <h1>
+  <img src="https://user-images.githubusercontent.com/92172698/212478747-4db80253-59a9-4702-b5a8-0cb2ecb7ef62.png">
+  <h2>
     DiscordJS-Moderation-Bot 
-   </h1>
+   </h2>
    <h5>
     Version 4.0  
    </h5>
