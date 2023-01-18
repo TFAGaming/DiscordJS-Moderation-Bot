@@ -1,0 +1,8 @@
+# Ignoring this fat folder
+node_modules/
+
+# Ignoring the config file so my privates won't be shown up
+config/main.js
+
+# Others
+package-lock.json
