@@ -50,6 +50,12 @@ module.exports = {
             type: 1,
             options: []
         },
+        {
+            name: 'stop',
+            description: 'Kill the entire bot process (THIS IS NOT SAFE TO USE).',
+            type: 1,
+            options: []
+        }
     ],
     role_perms: null,
     developers_only: true,
@@ -124,6 +130,22 @@ module.exports = {
                     content: `\`✅\` Logged in as **${client.user.username}**.`,
                     ephemeral: true
                 });
+            } catch (err) {
+                return interaction.editReply({
+                    content: `\`❌\` An error was found:\n${err}`,
+                    ephemeral: true
+                }).catch(() => { });
+            };
+        };
+
+        if (subCommandInput === 'stop') {
+            try {
+                await interaction.editReply({
+                    content: `\`👋\` Goodbye world!`,
+                    ephemeral: true
+                });
+
+                return process.exit(1);
             } catch (err) {
                 return interaction.editReply({
                     content: `\`❌\` An error was found:\n${err}`,
