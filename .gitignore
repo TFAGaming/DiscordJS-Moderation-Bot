@@ -1,7 +1,7 @@
 # Ignoring this fat folder
 node_modules/
 
-# Ignoring the config file so my privates won't be shown up
+# Ignoring the config file so my privates won't be shown up to the public
 config/main.js
 
 # Others
