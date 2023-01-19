@@ -5,9 +5,10 @@ module.exports = {
     description: '',
     type: 1,
     options: [],
-    role_perms: null,
-    developers_only: false,
-    category: '',
+    role_perms: [String],
+    developers_only: Boolean,
+    owner_only: Boolean,
+    category: String,
     run: async (client, interaction, config) => {
         
     }

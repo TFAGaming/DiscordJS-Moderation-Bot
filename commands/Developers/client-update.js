@@ -58,7 +58,8 @@ module.exports = {
         }
     ],
     role_perms: null,
-    developers_only: true,
+    developers_only: false,
+    owner_only: true,
     category: 'Developers',
     run: async (client, interaction, config) => {
 

@@ -1,5 +1,6 @@
 const client = require('../index');
 const config = require('../config/main');
+const { ModulesSchema } = require('../schemas/main');
 
 client.on('interactionCreate', async (interaction) => {
     if (interaction.isChatInputCommand() || interaction.isUserContextMenuCommand() || interaction.isMessageContextMenuCommand()) {
@@ -11,14 +12,36 @@ client.on('interactionCreate', async (interaction) => {
         });
 
         try {
-            if (command.developers_only && command.developers_only === true) {
-                if (typeof command.developers_only === 'boolean' && command.developers_only === true) {
-                    if (config.users?.developers && config.users?.developers?.length > 0) {
-                        if (!config.users.developers.some((dev) => interaction.user.id === dev)) return interaction.reply({
-                            content: `\`❌\` Sorry but this command is restricted for developers only!`,
+            const data = await ModulesSchema.findOne({
+                guild: interaction.guild.id
+            });
+
+            if (data) {
+                if (command.category) {
+                    if (data.modules.includes(command.category)) {
+                        return interaction.reply({
+                            content: `\`❌\` This command is currently disabled in the module **${command.category}**.`,
                             ephemeral: true
                         });
                     };
+                };
+            };
+
+            if (command.owner_only && command.owner_only === true) {
+                if (command.owner_only !== interaction.user.id) {
+                    return interaction.reply({
+                        content: `\`❌\` Sorry but this command is restricted for the bot owner only!`,
+                        ephemeral: true
+                    });
+                };
+            };
+
+            if (command.developers_only && command.developers_only === true) {
+                if (config.users?.developers && config.users?.developers?.length > 0) {
+                    if (!config.users.developers.some((dev) => interaction.user.id === dev)) return interaction.reply({
+                        content: `\`❌\` Sorry but this command is restricted for developers only!`,
+                        ephemeral: true
+                    });
                 };
             };
 
@@ -41,7 +64,6 @@ client.on('interactionCreate', async (interaction) => {
                             ephemeral: true
                         });
                     };
-
                 } else if (typeof command.role_perms === 'string') {
                     const role = interaction.guild.roles.cache.get(command.role_perms);
 

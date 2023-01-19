@@ -38,4 +38,19 @@ const AFKSchema = mongoose.model("AFKSchema",
     )
 );
 
-module.exports = { WarningsSchema, AFKSchema };
+const ModulesSchema = mongoose.model("ModulesSchema",
+    new mongoose.Schema(
+        {
+            guild: {
+                type: String,
+                required: true
+            },
+            modules: {
+                type: [String],
+                required: true
+            }
+        }
+    )
+);
+
+module.exports = { WarningsSchema, AFKSchema, ModulesSchema };
