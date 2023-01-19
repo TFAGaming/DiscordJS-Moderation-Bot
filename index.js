@@ -6,7 +6,7 @@ const config = require('./config/main');
 const client = new Client(config.client.constructor);
 
 client.commands = new Collection();
-client.modules = fs.readdirSync('./commands')
+client.modules = fs.readdirSync('./commands');
 
 module.exports = client;
 
