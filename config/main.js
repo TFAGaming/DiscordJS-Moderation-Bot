@@ -58,6 +58,7 @@ module.exports = {
 
     // Users:
     users: {
-        developers: ["YOUR_ID"]
+        developers: ["YOUR_ID"],
+        owner: "YOUR_ID"
     }
 };
