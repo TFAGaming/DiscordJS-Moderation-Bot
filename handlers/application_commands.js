@@ -53,11 +53,9 @@ module.exports = (client, config) => {
         };
     });
 
-    new ApplicationCommandsRegister(config.client.token, config.client.id)
+    const register = new ApplicationCommandsRegister(config.client.token, config.client.id)
         .setApplicationCommands(commands)
-        .setRestVersion(10)
-        .startRegistering({
-            logWhenFinishedRegistering: true,
-            logWhenStartRegistering: true
-        });
+        .setRestVersion(10);
+    
+    register.start();
 };
