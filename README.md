@@ -34,7 +34,7 @@ Then install the required dependencies:
 npm i discord.js@14 discord.js-v14-helper os ms uuidv4 axios mongoose
 ```
 
-## Start the project:
+## Start the project
 The setup for now is for [Visual Studio Code](https://code.visualstudio.com/) users only. If you are a repl.it user and non-beginner programmer, you can read the setup below but you have to edit the Environment processing for MongoDB and the bot token.
 - 1. Install [Visual Studio Code](https://code.visualstudio.com/).
 - 2. Install [node.js](https://nodejs.org/en/download/).
@@ -44,6 +44,16 @@ The setup for now is for [Visual Studio Code](https://code.visualstudio.com/) us
 - 6. Go to `config/main.js` and edit the properties of each file. Also make sure to check `config/data.json` because it is also a configuration file.
 - 7. Open terminal and then type `node index.js` or `node .`.
 - 8. Enjoy.
+
+## Hosting
+Due to repl.it rate-limits problems and unsecurities, we recommend other hosting services that are cool and easy to use.
+1. [SpeedyHosting](https://www.speedyhosting.tech/)
+2. [Fluid Nodes](https://fluidnodes.com/)
+
+If you want to watch a YouTube video how to setup your bot in SpeedyHosting, here is the URL:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ksSlfnVxOS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+For Fluid Nodes, there are no tutorials recorded by T.F.A.
 
 ## Issues
 If you have an issue, do not start to panic! Create an issue right [here](https://github.com/TFAGaming/Tags-System-Discord-Bot/issues) and wait for me or some people to respond to your errors.
