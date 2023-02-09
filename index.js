@@ -1,5 +1,5 @@
 const { Client, Collection } = require('discord.js');
-const { betterConsole, Colors } = require('discord.js-v14-helper');
+const { Colors, BetterConsoleLogger } = require('discord.js-v14-helper');
 const fs = require('fs');
 const config = require('./config/main');
 
@@ -10,14 +10,17 @@ client.modules = fs.readdirSync('./commands');
 
 module.exports = client;
 
-console.log(betterConsole(`
+new BetterConsoleLogger(`
 ████████╗░░░███████╗░░░░█████╗░
 ╚══██╔══╝░░░██╔════╝░░░██╔══██╗
 ░░░██║░░░░░░█████╗░░░░░███████║
 ░░░██║░░░░░░██╔══╝░░░░░██╔══██║
 ░░░██║░░░██╗██║░░░░░██╗██║░░██║
-░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝`, { color: Colors.BLUE }))
-console.log(betterConsole('Thanks for using my project! <3\n - From: T.F.A#7524', { color: Colors.BLUE }))
+░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝
+
+Thank you for using T.F.A#7524's project! :)`)
+    .setTextColor(Colors.Blue)
+    .log(true);
 
 fs.readdirSync('./handlers').forEach((handler) => {
     require('./handlers/' + handler)(client, config);
