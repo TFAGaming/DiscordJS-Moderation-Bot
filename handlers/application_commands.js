@@ -52,6 +52,6 @@ module.exports = (client, config) => {
         .setApplicationCommands(commands)
         .setRestVersion(10);
     
-    register.start().catch((data) => console.log(data));
+    register.start().catch((data) => console.log(data.errors));
 };
 
