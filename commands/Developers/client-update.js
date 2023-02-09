@@ -32,14 +32,54 @@ module.exports = {
                 },
                 {
                     name: 'activity-type',
-                    description: 'The client\'s new activity type. (Ex: 0 = Playing)',
-                    type: 4,
+                    description: 'The client\'s new activity type.',
+                    type: 3,
+                    choices: [
+                        {
+                            name: 'Playing',
+                            value: "0"
+                        },
+                        {
+                            name: 'Streaming',
+                            value: "1"
+                        },
+                        {
+                            name: 'Listening',
+                            value: "2"
+                        },
+                        {
+                            name: 'Watching',
+                            value: "3"
+                        },
+                        {
+                            name: 'Competing',
+                            value: "5"
+                        }
+                    ],
                     required: false
                 },
                 {
                     name: 'status',
-                    description: 'The client\'s new status. (Ex: "online", "idle"...)',
+                    description: 'The client\'s new status.',
                     type: 3,
+                    choices: [
+                        {
+                            name: 'Online',
+                            value: 'online'
+                        },
+                        {
+                            name: 'Do not Disturb',
+                            value: 'dnd'
+                        },
+                        {
+                            name: 'Idle',
+                            value: 'idle'
+                        },
+                        {
+                            name: 'Invisible',
+                            value: 'invisible'
+                        }
+                    ],
                     required: false
                 }
             ]
@@ -94,7 +134,7 @@ module.exports = {
             const statusInput = interaction.options.get('status')?.value || 'online';
 
             try {
-                await client.user.setPresence({ activities: [{ name: activityInput, type: activityTypeInput }], status: statusInput });
+                await client.user.setPresence({ activities: [{ name: activityInput, type: parseInt(activityTypeInput) }], status: statusInput });
 
                 const newPresenceData = {
                     activity: activityInput,
@@ -126,6 +166,10 @@ module.exports = {
                 await client.destroy();
 
                 await client.login(require('../../config/main').client.token);
+
+                const data = await JSON.parse(fs.readFileSync('././JSON/presence.json', 'utf-8'));
+
+                await client.user.setPresence({ activities: [{ name: data.activity, type: parseInt(data.activity_type) }], status: data.status });
 
                 return interaction.editReply({
                     content: `\`✅\` Logged in as **${client.user.username}**.`,
