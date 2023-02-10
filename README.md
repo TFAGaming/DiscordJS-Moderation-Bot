@@ -49,8 +49,9 @@ The setup for now is for [Visual Studio Code](https://code.visualstudio.com/) us
 Due to repl.it rate-limits problems and unsecurities, we recommend other hosting services that are cool and easy to use.
 1. [SpeedyHosting](https://www.speedyhosting.tech/)
 2. [Fluid Nodes](https://fluidnodes.com/)
+3. [Crystal Nodes](https://dash.ssmidge.xyz/)
 
-If you want to watch a YouTube video how to setup your bot in SpeedyHosting, [click here](https://www.youtube.com/watch?v=ksSlfnVxOS4&ab_channel=T.F.A7524). For Fluid Nodes, there are no tutorials recorded by T.F.A.
+If you want to watch a YouTube video how to setup your bot in SpeedyHosting, [click here](https://www.youtube.com/watch?v=ksSlfnVxOS4&ab_channel=T.F.A7524). For Fluid Nodes and Crystal Nodes, there are no tutorials recorded by T.F.A.
 
 ## Issues
 If you have an issue, do not start to panic! Create an issue right [here](https://github.com/TFAGaming/Tags-System-Discord-Bot/issues) and wait for me or some people to respond to your errors.
