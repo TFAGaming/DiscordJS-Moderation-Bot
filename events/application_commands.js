@@ -28,7 +28,7 @@ client.on('interactionCreate', async (interaction) => {
             };
 
             if (command.owner_only && command.owner_only === true) {
-                if (command.owner_only !== interaction.user.id) {
+                if (interaction.user.id !== config.users.owner) {
                     return interaction.reply({
                         content: `\`❌\` Sorry but this command is restricted for the bot owner only!`,
                         ephemeral: true
