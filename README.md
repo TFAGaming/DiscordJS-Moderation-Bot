@@ -8,11 +8,8 @@
    </h5>
 </div>
 
-# Before getting started...
-## Copyright warning
-Everyone must understand that this project is owned by me (T.F.A#7524), and if I see anybody making a YouTube video about this project without linking this GitHub repository in the description, their video will be taken down by me. Learn [YouTube copyright](https://www.youtube.com/howyoutubeworks/policies/copyright/) and do not steal anybody's projects. Thank you for reading this.
-
-CHANGING MY NAME (T.F.A#7524) TO ANY OTHER USERNAME IS GOING TO BE AN INSTANT COPYRIGHT STRIKE. BE CAREFUL FROM GETTING A STRIKE FROM ME. I REPEAT, DO NOT CHANGE MY USERNAME. THIS IS NOT A JOKE.
+# No longer supported!
+# A new powerful TypeScript Discord moderation bot is going to be released soon, cya!
 
 # DiscordJS-Moderation-Bot
 The best Discord Moderation bot that I have ever created, all made with discord.js version 14 and discord.js-v14-helper. This project requires MongoDB to connect to the database, so make sure to get a MongoDB URI! You can create many commands as you want to improve your bot, just make sure that your bot won't go crazy!
