@@ -9,7 +9,7 @@
 </div>
 
 # No longer supported!
-# A new powerful TypeScript Discord moderation bot is going to be released soon, cya!
+# [Click here](https://github.com/TFAGaming/TFA-Utilities/) to see the new TypeScript version.
 
 # DiscordJS-Moderation-Bot
 The best Discord Moderation bot that I have ever created, all made with discord.js version 14 and discord.js-v14-helper. This project requires MongoDB to connect to the database, so make sure to get a MongoDB URI! You can create many commands as you want to improve your bot, just make sure that your bot won't go crazy!
